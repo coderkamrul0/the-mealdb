@@ -1,17 +1,17 @@
+
+
 import React, { useState } from 'react';
 import Meals from '../Meals/Meals';
 import Sidebar from '../Sidebar/Sidebar';
 import './Home.css'
 
-
-
 const Home = () => {
 
-    const [meal,setMeal] = useState([])
+    const [cart, setCart] = useState([]);
 
-    const addToCart = (meal) =>{
-        setMeal(meal)
-    }
+    const addToCart = (meal) => {
+        setCart([...cart, meal]);
+    };
 
     return (
         <div className='home'>
@@ -19,7 +19,7 @@ const Home = () => {
                 <Meals addToCart={addToCart}></Meals>
             </div>
             <div className='sidebar'>
-                <Sidebar meal={meal}></Sidebar>
+                <Sidebar cart={cart}></Sidebar>
             </div>
         </div>
     );

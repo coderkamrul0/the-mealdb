@@ -3,3 +3,11 @@
     top: 0;
     padding-top: 20px;
 }
+.sideFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sideImg{
+    width: 100px;
+}
