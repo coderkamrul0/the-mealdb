@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Meal from '../Meal/Meal';
 import './Meals.css'
 
-const Meals = () => {
+const Meals = ({addToCart}) => {
     
     const [meal, setMeal] = useState([]);
 
@@ -43,7 +43,7 @@ const Meals = () => {
             </div>
             <div className='singleMeal'>
                 {
-                    meal.map(singleMeal => <Meal meal={singleMeal} key={singleMeal.idMeal}></Meal>)
+                    meal.map(singleMeal => <Meal meal={singleMeal} key={singleMeal.idMeal} addToCart={addToCart}></Meal>)
                 }
             </div>
         </div>
